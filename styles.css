@@ -187,6 +187,12 @@ img {
     font-weight: 700;
 }
 
+.logo-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+}
+
 .logo-icon {
     color: var(--primary);
     font-size: 1.75rem;
@@ -245,7 +251,29 @@ img {
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+}
+
+.lang-toggle {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    cursor: pointer;
+    color: var(--text-secondary);
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition-base);
+}
+
+.lang-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .theme-toggle {
