@@ -34,7 +34,7 @@
     
     /* Spacing */
     --container-width: 1200px;
-    --section-padding: 120px;
+    --section-padding: 80px;
     --card-radius: 16px;
     --button-radius: 12px;
     
@@ -835,7 +835,7 @@ img {
 .solution-steps {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -844,7 +844,7 @@ img {
     display: grid;
     grid-template-columns: 80px 1fr;
     gap: 24px;
-    padding: 32px;
+    padding: 28px 32px;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--card-radius);
@@ -1333,13 +1333,13 @@ img {
 .cta-content p {
     font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .cta-buttons {
     display: flex;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .cta-trust {
