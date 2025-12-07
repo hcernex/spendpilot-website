@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     animateElements.forEach((el, index) => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease ' + (index * 0.1) + 's, transform 0.6s ease ' + (index * 0.1) + 's';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.4s ease ' + (index * 0.05) + 's, transform 0.4s ease ' + (index * 0.05) + 's';
         observer.observe(el);
     });
     
