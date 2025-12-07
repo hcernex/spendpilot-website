@@ -58,9 +58,9 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="section-tag">Contact</div>
-                    <h1>Demandez votre <span class="highlight">audit gratuit</span></h1>
-                    <p>En quelques heures, vous saurez exactement combien vous pouvez économiser sur votre infrastructure Cloud Azure ou AWS.</p>
+                    <div class="section-tag" data-i18n="contact.tag">Contact</div>
+                    <h1 data-i18n="contact.title">Demandez votre <span class="highlight">audit gratuit</span></h1>
+                    <p data-i18n="contact.subtitle">En quelques heures, vous saurez exactement combien vous pouvez économiser sur votre infrastructure Cloud Azure ou AWS.</p>
                     
                     <div class="contact-methods">
                         <div class="contact-method">
@@ -71,7 +71,7 @@
                                 </svg>
                             </div>
                             <div class="contact-method-text">
-                                <span>Email</span>
+                                <span data-i18n="contact.email.label">Email</span>
                                 <strong>spendpilot.contact@gmail.com</strong>
                             </div>
                         </div>
@@ -83,8 +83,8 @@
                                 </svg>
                             </div>
                             <div class="contact-method-text">
-                                <span>Localisation</span>
-                                <strong>Paris, France</strong>
+                                <span data-i18n="contact.location.label">Localisation</span>
+                                <strong data-i18n="contact.location.value">Mareil-Marly, France</strong>
                             </div>
                         </div>
                         <div class="contact-method">
@@ -95,8 +95,8 @@
                                 </svg>
                             </div>
                             <div class="contact-method-text">
-                                <span>Temps de réponse</span>
-                                <strong>Sous 24 heures</strong>
+                                <span data-i18n="contact.response.label">Temps de réponse</span>
+                                <strong data-i18n="contact.response.value">Sous 24 heures</strong>
                             </div>
                         </div>
                     </div>
@@ -107,52 +107,52 @@
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                                 <path d="M9 12l2 2 4-4"/>
                             </svg>
-                            <strong style="color: #10B981;">Garantie zéro risque</strong>
+                            <strong style="color: #10B981;" data-i18n="contact.guarantee.title">Garantie zéro risque</strong>
                         </div>
                         <ul style="color: var(--text-secondary); font-size: 0.95rem; display: flex; flex-direction: column; gap: 8px;">
-                            <li>✓ Audit 100% gratuit et sans engagement</li>
-                            <li>✓ Accès lecture seule à votre tenant</li>
-                            <li>✓ Résultats en 48 heures</li>
-                            <li>✓ Pas d'économies = Pas de paiement</li>
+                            <li data-i18n="contact.guarantee.1">✓ Audit 100% gratuit et sans engagement</li>
+                            <li data-i18n="contact.guarantee.2">✓ Accès lecture seule à votre tenant</li>
+                            <li data-i18n="contact.guarantee.3">✓ Résultats en 48 heures</li>
+                            <li data-i18n="contact.guarantee.4">✓ Pas d'économies = Pas de paiement</li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="contact-form-wrapper">
-                    <h2>Formulaire de demande</h2>
-                    <p>Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement.</p>
+                    <h2 data-i18n="contact.form.title">Formulaire de demande</h2>
+                    <p data-i18n="contact.form.subtitle">Remplissez le formulaire ci-dessous et nous vous recontacterons rapidement.</p>
                     
                     <form class="contact-form" action="#" method="POST">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="firstName">Prénom *</label>
+                                <label for="firstName" data-i18n="contact.form.firstname">Prénom *</label>
                                 <input type="text" id="firstName" name="firstName" required placeholder="Jean">
                             </div>
                             <div class="form-group">
-                                <label for="lastName">Nom *</label>
+                                <label for="lastName" data-i18n="contact.form.lastname">Nom *</label>
                                 <input type="text" id="lastName" name="lastName" required placeholder="Dupont">
                             </div>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Email professionnel *</label>
+                            <label for="email" data-i18n="contact.form.email">Email professionnel *</label>
                             <input type="email" id="email" name="email" required placeholder="jean.dupont@entreprise.com">
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="company">Entreprise *</label>
+                                <label for="company" data-i18n="contact.form.company">Entreprise *</label>
                                 <input type="text" id="company" name="company" required placeholder="Ma Société SAS">
                             </div>
                             <div class="form-group">
-                                <label for="role">Fonction</label>
+                                <label for="role" data-i18n="contact.form.role">Fonction</label>
                                 <input type="text" id="role" name="role" placeholder="DSI, CTO, Cloud Architect...">
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="cloudProvider">Cloud Provider *</label>
+                                <label for="cloudProvider" data-i18n="contact.form.provider">Cloud Provider *</label>
                                 <select id="cloudProvider" name="cloudProvider" required>
                                     <option value="">Sélectionnez...</option>
                                     <option value="azure">Microsoft Azure</option>
@@ -162,7 +162,7 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="monthlySpend">Budget Cloud mensuel estimé</label>
+                                <label for="monthlySpend" data-i18n="contact.form.spend">Budget Cloud mensuel estimé</label>
                                 <select id="monthlySpend" name="monthlySpend">
                                     <option value="">Sélectionnez...</option>
                                     <option value="10k">Moins de 10 000 €</option>
@@ -175,17 +175,17 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Message (optionnel)</label>
+                            <label for="message" data-i18n="contact.form.message">Message (optionnel)</label>
                             <textarea id="message" name="message" placeholder="Décrivez brièvement votre situation, vos enjeux ou vos questions..."></textarea>
                         </div>
                         
                         <div class="form-checkbox">
                             <input type="checkbox" id="privacy" name="privacy" required>
-                            <label for="privacy">J'accepte que mes données soient traitées conformément à la <a href="#">politique de confidentialité</a> de SpendPilot. *</label>
+                            <label for="privacy" data-i18n="contact.form.privacy">J'accepte que mes données soient traitées conformément à la politique de confidentialité de SpendPilot. *</label>
                         </div>
                         
                         <button type="submit" class="btn btn-primary btn-full">
-                            <span>Demander mon audit gratuit</span>
+                            <span data-i18n="contact.form.submit">Demander mon audit gratuit</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M5 12h14M12 5l7 7-7 7"/>
                             </svg>
@@ -200,25 +200,25 @@
     <section class="faq-section" style="padding: 80px 0; background: var(--bg-card);">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">FAQ</span>
-                <h2>Questions fréquentes</h2>
+                <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+                <h2 data-i18n="faq.title">Questions fréquentes</h2>
             </div>
             <div class="faq-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto;">
                 <div class="faq-item" style="padding: 24px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;">Comment fonctionne l'audit gratuit ?</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Nous connectons SpendPilot à votre tenant Azure ou AWS en lecture seule. Notre outil analyse automatiquement vos ressources et génère un rapport complet des économies possibles en 48h.</p>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;" data-i18n="faq.q1.title">Comment fonctionne l'audit gratuit ?</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="faq.q1.answer">Nous connectons SpendPilot à votre tenant Azure ou AWS en lecture seule. Notre outil analyse automatiquement vos ressources et génère un rapport complet des économies possibles en 48h.</p>
                 </div>
                 <div class="faq-item" style="padding: 24px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;">Quelles données sont collectées ?</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Uniquement les métadonnées de configuration et d'usage (types d'instances, utilisation CPU/RAM, coûts). Aucune donnée métier n'est accessible ni stockée.</p>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;" data-i18n="faq.q2.title">Quelles données sont collectées ?</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="faq.q2.answer">Uniquement les métadonnées de configuration et d'usage (types d'instances, utilisation CPU/RAM, coûts). Aucune donnée métier n'est accessible ni stockée.</p>
                 </div>
                 <div class="faq-item" style="padding: 24px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;">Que se passe-t-il si vous ne trouvez rien ?</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Si notre audit ne révèle aucune économie significative, vous ne payez rien. C'est notre garantie zéro risque.</p>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;" data-i18n="faq.q3.title">Que se passe-t-il si vous ne trouvez rien ?</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="faq.q3.answer">Si notre audit ne révèle aucune économie significative, vous ne payez rien. C'est notre garantie zéro risque.</p>
                 </div>
                 <div class="faq-item" style="padding: 24px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;">Comment sont calculés les 20% ?</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Les 20% s'appliquent uniquement sur les économies effectivement réalisées la première année, après implémentation de nos recommandations.</p>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;" data-i18n="faq.q4.title">Comment sont calculés les 20% ?</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="faq.q4.answer">Les 20% s'appliquent uniquement sur les économies effectivement réalisées la première année, après implémentation de nos recommandations.</p>
                 </div>
             </div>
         </div>
@@ -230,22 +230,22 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <span class="logo-icon">◈</span>
+                        <img src="favicon.png" alt="SpendPilot" class="logo-img">
                         <span class="logo-text">Spend<span class="logo-highlight">Pilot</span></span>
                     </a>
-                    <p>Optimisation des coûts Cloud. FinOps et GreenOps pour Azure et AWS.</p>
+                    <p data-i18n="footer.tagline">Optimisation des coûts Cloud. FinOps et GreenOps pour Azure et AWS.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Navigation</h4>
+                    <h4 data-i18n="footer.navigation">Navigation</h4>
                     <ul>
-                        <li><a href="index.html#produit">Produit</a></li>
-                        <li><a href="index.html#tarifs">Tarifs</a></li>
-                        <li><a href="index.html#ressources">Ressources</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html#produit" data-i18n="nav.product">Produit</a></li>
+                        <li><a href="index.html#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
+                        <li><a href="index.html#ressources" data-i18n="nav.resources">Ressources</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Ressources</h4>
+                    <h4 data-i18n="footer.resources">Ressources</h4>
                     <ul>
                         <li><a href="https://www.finops.org/" target="_blank">FinOps Foundation</a></li>
                         <li><a href="https://data.finops.org/" target="_blank">State of FinOps</a></li>

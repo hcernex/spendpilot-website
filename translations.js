@@ -167,7 +167,19 @@ const translations = {
         "contact.guarantee.1": "✓ Audit 100% gratuit et sans engagement",
         "contact.guarantee.2": "✓ Accès lecture seule à votre tenant",
         "contact.guarantee.3": "✓ Résultats en 48 heures",
-        "contact.guarantee.4": "✓ Pas d'économies = Pas de paiement"
+        "contact.guarantee.4": "✓ Pas d'économies = Pas de paiement",
+        
+        // FAQ
+        "faq.tag": "FAQ",
+        "faq.title": "Questions fréquentes",
+        "faq.q1.title": "Comment fonctionne l'audit gratuit ?",
+        "faq.q1.answer": "Nous connectons SpendPilot à votre tenant Azure ou AWS en lecture seule. Notre outil analyse automatiquement vos ressources et génère un rapport complet des économies possibles en 48h.",
+        "faq.q2.title": "Quelles données sont collectées ?",
+        "faq.q2.answer": "Uniquement les métadonnées de configuration et d'usage (types d'instances, utilisation CPU/RAM, coûts). Aucune donnée métier n'est accessible ni stockée.",
+        "faq.q3.title": "Que se passe-t-il si vous ne trouvez rien ?",
+        "faq.q3.answer": "Si notre audit ne révèle aucune économie significative, vous ne payez rien. C'est notre garantie zéro risque.",
+        "faq.q4.title": "Comment sont calculés les 20% ?",
+        "faq.q4.answer": "Les 20% s'appliquent uniquement sur les économies effectivement réalisées la première année, après implémentation de nos recommandations."
     },
     
     en: {
@@ -334,7 +346,19 @@ const translations = {
         "contact.guarantee.1": "✓ 100% free audit, no commitment",
         "contact.guarantee.2": "✓ Read-only access to your tenant",
         "contact.guarantee.3": "✓ Results in 48 hours",
-        "contact.guarantee.4": "✓ No savings = No payment"
+        "contact.guarantee.4": "✓ No savings = No payment",
+        
+        // FAQ
+        "faq.tag": "FAQ",
+        "faq.title": "Frequently Asked Questions",
+        "faq.q1.title": "How does the free audit work?",
+        "faq.q1.answer": "We connect SpendPilot to your Azure or AWS tenant in read-only mode. Our tool automatically analyzes your resources and generates a complete savings report within 48 hours.",
+        "faq.q2.title": "What data is collected?",
+        "faq.q2.answer": "Only configuration and usage metadata (instance types, CPU/RAM usage, costs). No business data is accessed or stored.",
+        "faq.q3.title": "What happens if you don't find anything?",
+        "faq.q3.answer": "If our audit reveals no significant savings, you pay nothing. That's our zero-risk guarantee.",
+        "faq.q4.title": "How is the 20% calculated?",
+        "faq.q4.answer": "The 20% applies only to savings actually achieved in the first year, after implementing our recommendations."
     }
 };
 
