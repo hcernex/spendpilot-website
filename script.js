@@ -155,31 +155,17 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-            
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = 'Envoi en cours...';
             submitBtn.disabled = true;
             
-            // Simulate form submission
+            // Let the form submit naturally to Formspree
+            // Re-enable button after a delay in case of error
             setTimeout(function() {
-                submitBtn.innerHTML = 'Message envoyé !';
-                submitBtn.style.background = '#10B981';
-                
-                setTimeout(function() {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.background = '';
-                    submitBtn.disabled = false;
-                    contactForm.reset();
-                }, 3000);
-            }, 1500);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }, 5000);
         });
     }
     
