@@ -151,23 +151,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     // Form handling (contact page)
     // ============================================
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = 'Envoi en cours...';
-            submitBtn.disabled = true;
-            
-            // Let the form submit naturally to Formspree
-            // Re-enable button after a delay in case of error
-            setTimeout(function() {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-            }, 5000);
-        });
-    }
+    // ============================================
+    // Form handling - disabled, using native Formspree submission
+    // ============================================
     
     // ============================================
     // Resources tabs functionality
