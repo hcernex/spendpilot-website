@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog FinOps & GreenOps — SpendPilot</title>
     <meta name="description" content="Découvrez nos articles sur le FinOps, GreenOps, l'optimisation des coûts Cloud Azure et AWS. Conseils, bonnes pratiques et actualités.">
-    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spendpilot.com/blog.html">
+    <meta property="og:title" content="Blog FinOps & GreenOps — SpendPilot">
+    <meta property="og:description" content="Découvrez nos articles sur le FinOps, GreenOps, l'optimisation des coûts Cloud Azure et AWS.">
+    <meta property="og:image" content="https://spendpilot.com/favicon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://spendpilot.com/blog.html">
+    <meta property="twitter:title" content="Blog FinOps & GreenOps — SpendPilot">
+    <meta property="twitter:description" content="Articles, guides et conseils sur l'optimisation des coûts Cloud.">
+    <meta property="twitter:image" content="https://spendpilot.com/favicon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +27,10 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://spendpilot.com/blog.html">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,7 +41,7 @@
                 <img src="favicon.png" alt="SpendPilot" class="logo-img">
                 <span class="logo-text">Spend<span class="logo-highlight">Pilot</span></span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html#produit" data-i18n="nav.product">Produit</a></li>
                 <li><a href="index.html#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -45,7 +62,7 @@
                 </button>
                 <a href="contact.html" class="nav-cta" data-i18n="nav.cta">Audit Gratuit →</a>
             </div>
-            <button class="mobile-menu-btn" aria-label="Menu">
+            <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -73,7 +90,7 @@
                 <article class="blog-card">
                     <div class="blog-card-image">
                         <span class="blog-category">FinOps</span>
-                        <img src="blog/images/finops-guide.svg" alt="Guide FinOps 2025" class="blog-image">
+                        <img src="blog/images/finops-guide.svg" alt="Guide FinOps 2025" class="blog-image" loading="lazy">
                     </div>
                     <div class="blog-card-content">
                         <span class="blog-date">7 décembre 2024</span>
@@ -87,7 +104,7 @@
                 <article class="blog-card">
                     <div class="blog-card-image">
                         <span class="blog-category">Azure</span>
-                        <img src="blog/images/azure-optimization.svg" alt="Optimisation Azure" class="blog-image">
+                        <img src="blog/images/azure-optimization.svg" alt="Optimisation Azure" class="blog-image" loading="lazy">
                     </div>
                     <div class="blog-card-content">
                         <span class="blog-date">5 décembre 2024</span>
@@ -101,7 +118,7 @@
                 <article class="blog-card">
                     <div class="blog-card-image">
                         <span class="blog-category">AWS</span>
-                        <img src="blog/images/aws-savings-plans.svg" alt="AWS Savings Plans" class="blog-image">
+                        <img src="blog/images/aws-savings-plans.svg" alt="AWS Savings Plans" class="blog-image" loading="lazy">
                     </div>
                     <div class="blog-card-content">
                         <span class="blog-date">3 décembre 2024</span>
@@ -115,7 +132,7 @@
                 <article class="blog-card">
                     <div class="blog-card-image">
                         <span class="blog-category">GreenOps</span>
-                        <img src="blog/images/greenops.svg" alt="GreenOps Cloud" class="blog-image">
+                        <img src="blog/images/greenops.svg" alt="GreenOps Cloud" class="blog-image" loading="lazy">
                     </div>
                     <div class="blog-card-content">
                         <span class="blog-date">1 décembre 2024</span>
@@ -129,7 +146,7 @@
                 <article class="blog-card">
                     <div class="blog-card-image">
                         <span class="blog-category">Bonnes pratiques</span>
-                        <img src="blog/images/orphan-resources.svg" alt="Ressources orphelines" class="blog-image">
+                        <img src="blog/images/orphan-resources.svg" alt="Ressources orphelines" class="blog-image" loading="lazy">
                     </div>
                     <div class="blog-card-content">
                         <span class="blog-date">28 novembre 2024</span>
@@ -143,7 +160,7 @@
                 <article class="blog-card">
                     <div class="blog-card-image">
                         <span class="blog-category">Actualités</span>
-                        <img src="blog/images/cloud-waste.svg" alt="Gaspillage Cloud" class="blog-image">
+                        <img src="blog/images/cloud-waste.svg" alt="Gaspillage Cloud" class="blog-image" loading="lazy">
                     </div>
                     <div class="blog-card-content">
                         <span class="blog-date">25 novembre 2024</span>
@@ -163,10 +180,10 @@
             <div class="newsletter-content">
                 <h2>Restez informé des dernières actualités FinOps</h2>
                 <p>Recevez nos articles, guides et conseils directement dans votre boîte mail.</p>
-                <form class="newsletter-form" action="https://formspree.io/f/xkgdvngz" method="POST">
+                <form class="newsletter-form" action="https://formspree.io/f/xkgdvngz" method="POST" aria-label="Inscription newsletter">
                     <input type="hidden" name="form_type" value="newsletter">
-                    <input type="email" name="email" placeholder="Votre email professionnel" required>
-                    <button type="submit" class="btn btn-primary">S'abonner</button>
+                    <input type="email" name="email" placeholder="Votre email professionnel" required aria-required="true" aria-label="Email professionnel pour newsletter" id="newsletter-email">
+                    <button type="submit" class="btn btn-primary" aria-label="S'abonner à la newsletter">S'abonner</button>
                 </form>
             </div>
         </div>
@@ -195,9 +212,9 @@
                 <div class="footer-links">
                     <h4 data-i18n="footer.resources">Ressources</h4>
                     <ul>
-                        <li><a href="https://www.finops.org/" target="_blank">FinOps Foundation</a></li>
-                        <li><a href="https://data.finops.org/" target="_blank">State of FinOps</a></li>
-                        <li><a href="https://learn.microsoft.com/fr-fr/cloud-computing/finops/overview" target="_blank">FinOps par Microsoft</a></li>
+                        <li><a href="https://www.finops.org/" target="_blank" rel="noopener noreferrer">FinOps Foundation</a></li>
+                        <li><a href="https://data.finops.org/" target="_blank" rel="noopener noreferrer">State of FinOps</a></li>
+                        <li><a href="https://learn.microsoft.com/fr-fr/cloud-computing/finops/overview" target="_blank" rel="noopener noreferrer">FinOps par Microsoft</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -205,12 +222,12 @@
                     <p><a href="mailto:spendpilot.contact@gmail.com">spendpilot.contact@gmail.com</a></p>
                     <p><a href="tel:+33749958756">+33 7 49 95 87 56</a></p>
                     <div class="footer-social">
-                        <a href="https://twitter.com/SpendPilot_app" target="_blank" aria-label="Twitter">
+                        <a href="https://twitter.com/SpendPilot_app" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                             </svg>
                         </a>
-                        <a href="https://instagram.com/spendpilot_app" target="_blank" aria-label="Instagram">
+                        <a href="https://instagram.com/spendpilot_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
@@ -228,6 +245,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js" integrity="sha384-vqFJA6I7xFh3y6xP9RA0y2zjlz2XN/8kcKqWvE/wZvlvQ1Fq7mF5Qnc7Bx6M8ePL" crossorigin="anonymous"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>

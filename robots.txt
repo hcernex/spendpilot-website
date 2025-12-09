@@ -1,0 +1,9 @@
+# robots.txt for SpendPilot
+User-agent: *
+Allow: /
+
+# Disallow admin/private areas if any
+# Disallow: /admin/
+
+# Sitemap
+Sitemap: https://spendpilot.com/sitemap.xml

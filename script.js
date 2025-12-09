@@ -45,12 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', function() {
-            this.classList.toggle('active');
+            const isExpanded = this.classList.toggle('active');
             navLinks.classList.toggle('active');
             document.body.classList.toggle('menu-open');
+
+            // Update ARIA attribute for accessibility
+            this.setAttribute('aria-expanded', isExpanded);
         });
     }
     
@@ -194,16 +197,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ============================================
-    // Typing effect for hero (optional)
+    // Typing effect for hero (disabled)
+    // To enable: uncomment the code below
     // ============================================
+    /*
     const heroHighlight = document.querySelector('.hero-title .highlight');
-    
     if (heroHighlight) {
         const words = ['gaspillée', 'perdue', 'oubliée'];
         let currentWord = 0;
-        
-        // Uncomment to enable typing effect
-        /*
         setInterval(function() {
             heroHighlight.style.opacity = '0';
             setTimeout(function() {
@@ -212,26 +213,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 heroHighlight.style.opacity = '1';
             }, 300);
         }, 3000);
-        */
     }
+    */
     
     // ============================================
-    // Parallax effect for floating shapes
+    // Parallax effect for floating shapes (with throttling)
     // ============================================
     const shapes = document.querySelectorAll('.shape');
-    
+
     if (shapes.length > 0) {
-        window.addEventListener('mousemove', function(e) {
+        let lastTime = 0;
+        const throttleDelay = 16; // ~60fps
+
+        const handleParallax = function(e) {
+            const now = Date.now();
+            if (now - lastTime < throttleDelay) return;
+            lastTime = now;
+
             const x = e.clientX / window.innerWidth;
             const y = e.clientY / window.innerHeight;
-            
+
             shapes.forEach((shape, index) => {
                 const speed = (index + 1) * 20;
                 const xOffset = (x - 0.5) * speed;
                 const yOffset = (y - 0.5) * speed;
                 shape.style.transform = 'translate(' + xOffset + 'px, ' + yOffset + 'px)';
             });
-        });
+        };
+
+        window.addEventListener('mousemove', handleParallax);
     }
     
     console.log('SpendPilot website loaded successfully');

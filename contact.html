@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact — SpendPilot | Audit Cloud Gratuit</title>
     <meta name="description" content="Demandez votre audit Cloud gratuit. Découvrez en 48h combien vous pouvez économiser sur Azure et AWS.">
-    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spendpilot.com/contact.html">
+    <meta property="og:title" content="Contact — SpendPilot | Audit Cloud Gratuit">
+    <meta property="og:description" content="Demandez votre audit Cloud gratuit. Découvrez en 48h combien vous pouvez économiser sur Azure et AWS.">
+    <meta property="og:image" content="https://spendpilot.com/favicon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://spendpilot.com/contact.html">
+    <meta property="twitter:title" content="Contact — SpendPilot | Audit Cloud Gratuit">
+    <meta property="twitter:description" content="Demandez votre audit Cloud gratuit en 48h.">
+    <meta property="twitter:image" content="https://spendpilot.com/favicon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +27,52 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://spendpilot.com/contact.html">
+
+    <!-- Structured Data - FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Comment fonctionne l'audit gratuit ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nous connectons SpendPilot à votre tenant Azure ou AWS en lecture seule. Notre outil analyse automatiquement vos ressources et génère un rapport complet des économies possibles en 48h."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelles données sont collectées ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Uniquement les métadonnées de configuration et d'usage (types d'instances, utilisation CPU/RAM, coûts). Aucune donnée métier n'est accessible ni stockée."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Que se passe-t-il si vous ne trouvez rien ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Si notre audit ne révèle aucune économie significative, vous ne payez rien. C'est notre garantie zéro risque."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment sont calculés les 20% ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Les 20% s'appliquent uniquement sur les économies effectivement réalisées la première année, après implémentation de nos recommandations."
+                }
+            }
+        ]
+    }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,7 +83,7 @@
                 <img src="favicon.png" alt="SpendPilot" class="logo-img">
                 <span class="logo-text">Spend<span class="logo-highlight">Pilot</span></span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html#produit" data-i18n="nav.product">Produit</a></li>
                 <li><a href="index.html#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -45,7 +104,7 @@
                 </button>
                 <a href="contact.html" class="nav-cta" data-i18n="nav.cta">Audit Gratuit →</a>
             </div>
-            <button class="mobile-menu-btn" aria-label="Menu">
+            <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -101,15 +160,15 @@
                         </div>
                     </div>
                     
-                    <div class="contact-trust" style="margin-top: 40px; padding: 24px; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 16px;">
-                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                    <div class="contact-trust">
+                        <div class="contact-trust-header">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                                 <path d="M9 12l2 2 4-4"/>
                             </svg>
-                            <strong style="color: #10B981;" data-i18n="contact.guarantee.title">Garantie zéro risque</strong>
+                            <strong class="contact-trust-title" data-i18n="contact.guarantee.title">Garantie zéro risque</strong>
                         </div>
-                        <ul style="color: var(--text-secondary); font-size: 0.95rem; display: flex; flex-direction: column; gap: 8px;">
+                        <ul class="contact-trust-list">
                             <li data-i18n="contact.guarantee.1">✓ Audit 100% gratuit et sans engagement</li>
                             <li data-i18n="contact.guarantee.2">✓ Accès lecture seule à votre tenant</li>
                             <li data-i18n="contact.guarantee.3">✓ Résultats en 48 heures</li>
@@ -128,34 +187,34 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName" data-i18n="contact.form.firstname">Prénom *</label>
-                                <input type="text" id="firstName" name="firstName" required placeholder="Jean">
+                                <input type="text" id="firstName" name="firstName" required aria-required="true" aria-label="Prénom" placeholder="Jean">
                             </div>
                             <div class="form-group">
                                 <label for="lastName" data-i18n="contact.form.lastname">Nom *</label>
-                                <input type="text" id="lastName" name="lastName" required placeholder="Dupont">
+                                <input type="text" id="lastName" name="lastName" required aria-required="true" aria-label="Nom" placeholder="Dupont">
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="email" data-i18n="contact.form.email">Email professionnel *</label>
-                            <input type="email" id="email" name="email" required placeholder="jean.dupont@entreprise.com">
+                            <input type="email" id="email" name="email" required aria-required="true" aria-label="Email professionnel" placeholder="jean.dupont@entreprise.com">
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="company" data-i18n="contact.form.company">Entreprise *</label>
-                                <input type="text" id="company" name="company" required placeholder="Ma Société SAS">
+                                <input type="text" id="company" name="company" required aria-required="true" aria-label="Entreprise" placeholder="Ma Société SAS">
                             </div>
                             <div class="form-group">
                                 <label for="role" data-i18n="contact.form.role">Fonction</label>
-                                <input type="text" id="role" name="role" placeholder="DSI, CTO, Cloud Architect...">
+                                <input type="text" id="role" name="role" aria-label="Fonction" placeholder="DSI, CTO, Cloud Architect...">
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="cloudProvider" data-i18n="contact.form.provider">Cloud Provider *</label>
-                                <select id="cloudProvider" name="cloudProvider" required>
+                                <select id="cloudProvider" name="cloudProvider" required aria-required="true" aria-label="Cloud Provider">
                                     <option value="">Sélectionnez...</option>
                                     <option value="azure">Microsoft Azure</option>
                                     <option value="aws">Amazon Web Services (AWS)</option>
@@ -165,7 +224,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="monthlySpend" data-i18n="contact.form.spend">Budget Cloud mensuel estimé</label>
-                                <select id="monthlySpend" name="monthlySpend">
+                                <select id="monthlySpend" name="monthlySpend" aria-label="Budget Cloud mensuel estimé">
                                     <option value="">Sélectionnez...</option>
                                     <option value="10k">Moins de 10 000 €</option>
                                     <option value="10-50k">10 000 € - 50 000 €</option>
@@ -175,14 +234,14 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message" data-i18n="contact.form.message">Message (optionnel)</label>
-                            <textarea id="message" name="message" placeholder="Décrivez brièvement votre situation, vos enjeux ou vos questions..."></textarea>
+                            <textarea id="message" name="message" aria-label="Message optionnel" placeholder="Décrivez brièvement votre situation, vos enjeux ou vos questions..."></textarea>
                         </div>
-                        
+
                         <div class="form-checkbox">
-                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <input type="checkbox" id="privacy" name="privacy" required aria-required="true" aria-label="Acceptation de la politique de confidentialité">
                             <label for="privacy" data-i18n="contact.form.privacy">J'accepte que mes données soient traitées conformément à la politique de confidentialité de SpendPilot. *</label>
                         </div>
                         
@@ -199,28 +258,28 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq-section" style="padding: 80px 0; background: var(--bg-card);">
+    <section class="faq-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag" data-i18n="faq.tag">FAQ</span>
                 <h2 data-i18n="faq.title">Questions fréquentes</h2>
             </div>
-            <div class="faq-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto;">
-                <div class="faq-item" style="padding: 24px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;" data-i18n="faq.q1.title">Comment fonctionne l'audit gratuit ?</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="faq.q1.answer">Nous connectons SpendPilot à votre tenant Azure ou AWS en lecture seule. Notre outil analyse automatiquement vos ressources et génère un rapport complet des économies possibles en 48h.</p>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q1.title">Comment fonctionne l'audit gratuit ?</h3>
+                    <p data-i18n="faq.q1.answer">Nous connectons SpendPilot à votre tenant Azure ou AWS en lecture seule. Notre outil analyse automatiquement vos ressources et génère un rapport complet des économies possibles en 48h.</p>
                 </div>
-                <div class="faq-item" style="padding: 24px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;" data-i18n="faq.q2.title">Quelles données sont collectées ?</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="faq.q2.answer">Uniquement les métadonnées de configuration et d'usage (types d'instances, utilisation CPU/RAM, coûts). Aucune donnée métier n'est accessible ni stockée.</p>
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q2.title">Quelles données sont collectées ?</h3>
+                    <p data-i18n="faq.q2.answer">Uniquement les métadonnées de configuration et d'usage (types d'instances, utilisation CPU/RAM, coûts). Aucune donnée métier n'est accessible ni stockée.</p>
                 </div>
-                <div class="faq-item" style="padding: 24px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;" data-i18n="faq.q3.title">Que se passe-t-il si vous ne trouvez rien ?</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="faq.q3.answer">Si notre audit ne révèle aucune économie significative, vous ne payez rien. C'est notre garantie zéro risque.</p>
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q3.title">Que se passe-t-il si vous ne trouvez rien ?</h3>
+                    <p data-i18n="faq.q3.answer">Si notre audit ne révèle aucune économie significative, vous ne payez rien. C'est notre garantie zéro risque.</p>
                 </div>
-                <div class="faq-item" style="padding: 24px; background: var(--bg-dark); border: 1px solid var(--border); border-radius: 16px;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 12px;" data-i18n="faq.q4.title">Comment sont calculés les 20% ?</h3>
-                    <p style="color: var(--text-secondary); font-size: 0.95rem;" data-i18n="faq.q4.answer">Les 20% s'appliquent uniquement sur les économies effectivement réalisées la première année, après implémentation de nos recommandations.</p>
+                <div class="faq-item">
+                    <h3 data-i18n="faq.q4.title">Comment sont calculés les 20% ?</h3>
+                    <p data-i18n="faq.q4.answer">Les 20% s'appliquent uniquement sur les économies effectivement réalisées la première année, après implémentation de nos recommandations.</p>
                 </div>
             </div>
         </div>
@@ -249,9 +308,9 @@
                 <div class="footer-links">
                     <h4 data-i18n="footer.resources">Ressources</h4>
                     <ul>
-                        <li><a href="https://www.finops.org/" target="_blank">FinOps Foundation</a></li>
-                        <li><a href="https://data.finops.org/" target="_blank">State of FinOps</a></li>
-                        <li><a href="https://learn.microsoft.com/fr-fr/cloud-computing/finops/overview" target="_blank">FinOps par Microsoft</a></li>
+                        <li><a href="https://www.finops.org/" target="_blank" rel="noopener noreferrer">FinOps Foundation</a></li>
+                        <li><a href="https://data.finops.org/" target="_blank" rel="noopener noreferrer">State of FinOps</a></li>
+                        <li><a href="https://learn.microsoft.com/fr-fr/cloud-computing/finops/overview" target="_blank" rel="noopener noreferrer">FinOps par Microsoft</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -259,12 +318,12 @@
                     <p><a href="mailto:spendpilot.contact@gmail.com">spendpilot.contact@gmail.com</a></p>
                     <p><a href="tel:+33749958756">+33 7 49 95 87 56</a></p>
                     <div class="footer-social">
-                        <a href="https://twitter.com/SpendPilot_app" target="_blank" aria-label="Twitter">
+                        <a href="https://twitter.com/SpendPilot_app" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                             </svg>
                         </a>
-                        <a href="https://instagram.com/spendpilot_app" target="_blank" aria-label="Instagram">
+                        <a href="https://instagram.com/spendpilot_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
@@ -282,6 +341,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js" integrity="sha384-vqFJA6I7xFh3y6xP9RA0y2zjlz2XN/8kcKqWvE/wZvlvQ1Fq7mF5Qnc7Bx6M8ePL" crossorigin="anonymous"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>

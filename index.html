@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpendPilot — Optimisation des coûts Cloud | FinOps & GreenOps</title>
     <meta name="description" content="Réduisez votre facture Cloud de 20 à 40%. Audit gratuit en 48h, économies garanties. FinOps et GreenOps pour Azure et AWS.">
-    
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://spendpilot.com/">
+    <meta property="og:title" content="SpendPilot — Optimisation des coûts Cloud | FinOps & GreenOps">
+    <meta property="og:description" content="Réduisez votre facture Cloud de 20 à 40%. Audit gratuit en 48h, économies garanties. FinOps et GreenOps pour Azure et AWS.">
+    <meta property="og:image" content="https://spendpilot.com/favicon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://spendpilot.com/">
+    <meta property="twitter:title" content="SpendPilot — Optimisation des coûts Cloud | FinOps & GreenOps">
+    <meta property="twitter:description" content="Réduisez votre facture Cloud de 20 à 40%. Audit gratuit en 48h, économies garanties.">
+    <meta property="twitter:image" content="https://spendpilot.com/favicon.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +27,35 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
-    
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://spendpilot.com/">
+
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SpendPilot",
+        "description": "Optimisation des coûts Cloud. FinOps & GreenOps pour Azure et AWS.",
+        "url": "https://spendpilot.com",
+        "logo": "https://spendpilot.com/favicon.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+33749958756",
+            "email": "spendpilot.contact@gmail.com",
+            "contactType": "Customer Service",
+            "availableLanguage": ["French", "English"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mareil-Marly",
+            "addressCountry": "FR"
+        },
+        "sameAs": []
+    }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,7 +66,7 @@
                 <img src="favicon.png" alt="SpendPilot" class="logo-img">
                 <span class="logo-text">Spend<span class="logo-highlight">Pilot</span></span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#produit" data-i18n="nav.product">Produit</a></li>
                 <li><a href="#tarifs" data-i18n="nav.pricing">Tarifs</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -45,7 +87,7 @@
                 </button>
                 <a href="contact.html" class="nav-cta" data-i18n="nav.cta">Audit Gratuit →</a>
             </div>
-            <button class="mobile-menu-btn" aria-label="Menu">
+            <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -132,19 +174,19 @@
                 <div class="stat-item">
                     <span class="stat-value" data-i18n="stats.waste.value">135 Mds$</span>
                     <span class="stat-label" data-i18n="stats.waste.label">gaspillés dans le Cloud en 2024</span>
-                    <a href="https://www.mediavenir.fr/gaspillage-du-cloud-135-milliards-de-dollars-partis-en-fumee-en-2024/" target="_blank" class="stat-source">Source: Mediavenir</a>
+                    <a href="https://www.mediavenir.fr/gaspillage-du-cloud-135-milliards-de-dollars-partis-en-fumee-en-2024/" target="_blank" rel="noopener noreferrer" class="stat-source">Source: Mediavenir</a>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <span class="stat-value" data-i18n="stats.budget.value">72%</span>
                     <span class="stat-label" data-i18n="stats.budget.label">des entreprises dépassent leur budget Cloud</span>
-                    <a href="https://www.cio-online.com/actualites/lire-finops-les-mentalites-evoluent-les-depassements-de-budget-restent-15595.html" target="_blank" class="stat-source">Source: CIO Online / Forrester</a>
+                    <a href="https://www.cio-online.com/actualites/lire-finops-les-mentalites-evoluent-les-depassements-de-budget-restent-15595.html" target="_blank" rel="noopener noreferrer" class="stat-source">Source: CIO Online / Forrester</a>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat-item">
                     <span class="stat-value" data-i18n="stats.savings.value">20-40%</span>
                     <span class="stat-label" data-i18n="stats.savings.label">d'économies possibles avec le FinOps</span>
-                    <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/tmt-predictions-finops-tools-help-lower-cloud-spending.html" target="_blank" class="stat-source">Source: Deloitte</a>
+                    <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/tmt-predictions-finops-tools-help-lower-cloud-spending.html" target="_blank" rel="noopener noreferrer" class="stat-source">Source: Deloitte</a>
                 </div>
             </div>
         </div>
@@ -418,19 +460,19 @@
                 <blockquote class="quote-card">
                     <p>"Les entreprises du monde entier gaspillent 135 milliards de dollars dans le cloud en 2024."</p>
                     <cite>
-                        <a href="https://www.mediavenir.fr/gaspillage-du-cloud-135-milliards-de-dollars-partis-en-fumee-en-2024/" target="_blank">Mediavenir, 2024</a>
+                        <a href="https://www.mediavenir.fr/gaspillage-du-cloud-135-milliards-de-dollars-partis-en-fumee-en-2024/" target="_blank" rel="noopener noreferrer">Mediavenir, 2024</a>
                     </cite>
                 </blockquote>
                 <blockquote class="quote-card">
                     <p>"FinOps practices could help save $21 billion in cloud spending in 2025."</p>
                     <cite>
-                        <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/tmt-predictions-finops-tools-help-lower-cloud-spending.html" target="_blank">Deloitte TMT Predictions, 2025</a>
+                        <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/tmt-predictions-finops-tools-help-lower-cloud-spending.html" target="_blank" rel="noopener noreferrer">Deloitte TMT Predictions, 2025</a>
                     </cite>
                 </blockquote>
                 <blockquote class="quote-card">
                     <p>"72% des entreprises dépassent leur budget cloud, malgré une prise de conscience croissante."</p>
                     <cite>
-                        <a href="https://www.cio-online.com/actualites/lire-finops-les-mentalites-evoluent-les-depassements-de-budget-restent-15595.html" target="_blank">CIO Online / Forrester, 2024</a>
+                        <a href="https://www.cio-online.com/actualites/lire-finops-les-mentalites-evoluent-les-depassements-de-budget-restent-15595.html" target="_blank" rel="noopener noreferrer">CIO Online / Forrester, 2024</a>
                     </cite>
                 </blockquote>
             </div>
@@ -453,15 +495,15 @@
             <div class="resources-content">
                 <div class="tab-content active" id="market">
                     <div class="resource-links">
-                        <a href="https://www.finops.org/" target="_blank" class="resource-link">
+                        <a href="https://www.finops.org/" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">FinOps Foundation</span>
                             <span class="resource-desc">La référence mondiale pour les pratiques FinOps</span>
                         </a>
-                        <a href="https://data.finops.org/" target="_blank" class="resource-link">
+                        <a href="https://data.finops.org/" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">State of FinOps Report</span>
                             <span class="resource-desc">Données et tendances annuelles du marché</span>
                         </a>
-                        <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/tmt-predictions-finops-tools-help-lower-cloud-spending.html" target="_blank" class="resource-link">
+                        <a href="https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2025/tmt-predictions-finops-tools-help-lower-cloud-spending.html" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">Deloitte TMT Predictions 2025</span>
                             <span class="resource-desc">21 milliards d'économies possibles grâce au FinOps</span>
                         </a>
@@ -469,15 +511,15 @@
                 </div>
                 <div class="tab-content" id="waste">
                     <div class="resource-links">
-                        <a href="https://www.mediavenir.fr/gaspillage-du-cloud-135-milliards-de-dollars-partis-en-fumee-en-2024/" target="_blank" class="resource-link">
+                        <a href="https://www.mediavenir.fr/gaspillage-du-cloud-135-milliards-de-dollars-partis-en-fumee-en-2024/" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">135 milliards gaspillés en 2024</span>
                             <span class="resource-desc">Mediavenir — Analyse du gaspillage Cloud mondial</span>
                         </a>
-                        <a href="https://www.itpro.com/cloud/cloud-computing/enterprises-are-set-to-waste-usd44-5-billion-on-needless-cloud-spending-this-year-the-growing-disconnect-between-finops-and-engineering-teams-is-a-key-factor" target="_blank" class="resource-link">
+                        <a href="https://www.itpro.com/cloud/cloud-computing/enterprises-are-set-to-waste-usd44-5-billion-on-needless-cloud-spending-this-year-the-growing-disconnect-between-finops-and-engineering-teams-is-a-key-factor" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">44.5B$ de gaspillage prévu en 2025</span>
                             <span class="resource-desc">IT Pro / Harness — Projections et tendances</span>
                         </a>
-                        <a href="https://www.cio-online.com/actualites/lire-finops-les-mentalites-evoluent-les-depassements-de-budget-restent-15595.html" target="_blank" class="resource-link">
+                        <a href="https://www.cio-online.com/actualites/lire-finops-les-mentalites-evoluent-les-depassements-de-budget-restent-15595.html" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">72% dépassent leur budget Cloud</span>
                             <span class="resource-desc">CIO Online — Enquête Forrester</span>
                         </a>
@@ -485,11 +527,11 @@
                 </div>
                 <div class="tab-content" id="green">
                     <div class="resource-links">
-                        <a href="https://www.forrester.com/blogs/greenops-use-cloud-cost-as-a-proxy-for-sustainability/" target="_blank" class="resource-link">
+                        <a href="https://www.forrester.com/blogs/greenops-use-cloud-cost-as-a-proxy-for-sustainability/" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">GreenOps: Cost as Sustainability Proxy</span>
                             <span class="resource-desc">Forrester — Lien entre coûts et empreinte carbone</span>
                         </a>
-                        <a href="https://learn.microsoft.com/fr-fr/cloud-computing/finops/overview" target="_blank" class="resource-link">
+                        <a href="https://learn.microsoft.com/fr-fr/cloud-computing/finops/overview" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">FinOps avec Microsoft Cloud</span>
                             <span class="resource-desc">Documentation officielle Azure FinOps</span>
                         </a>
@@ -497,15 +539,15 @@
                 </div>
                 <div class="tab-content" id="fr">
                     <div class="resource-links">
-                        <a href="https://www.journaldunet.com/intelligence-artificielle/1538513-le-finops-un-levier-de-valeur-ajoutee-pour-la-dsi/" target="_blank" class="resource-link">
+                        <a href="https://www.journaldunet.com/intelligence-artificielle/1538513-le-finops-un-levier-de-valeur-ajoutee-pour-la-dsi/" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">Le FinOps, levier de valeur pour la DSI</span>
                             <span class="resource-desc">Journal du Net</span>
                         </a>
-                        <a href="https://www.lemagit.fr/conseil/Cinq-etapes-pour-maitriser-les-couts-du-cloud" target="_blank" class="resource-link">
+                        <a href="https://www.lemagit.fr/conseil/Cinq-etapes-pour-maitriser-les-couts-du-cloud" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">5 étapes pour maîtriser les coûts Cloud</span>
                             <span class="resource-desc">LeMagIT</span>
                         </a>
-                        <a href="https://www.informatiquenews.fr/dsi-les-5-bonnes-pratiques-finops-pour-optimiser-les-couts-cloud-sylvain-abergel-o11y-101011" target="_blank" class="resource-link">
+                        <a href="https://www.informatiquenews.fr/dsi-les-5-bonnes-pratiques-finops-pour-optimiser-les-couts-cloud-sylvain-abergel-o11y-101011" target="_blank" rel="noopener noreferrer" class="resource-link">
                             <span class="resource-title">5 bonnes pratiques FinOps pour DSI</span>
                             <span class="resource-desc">InformatiqueNews</span>
                         </a>
@@ -559,9 +601,9 @@
                 <div class="footer-links">
                     <h4 data-i18n="footer.resources">Ressources</h4>
                     <ul>
-                        <li><a href="https://www.finops.org/" target="_blank">FinOps Foundation</a></li>
-                        <li><a href="https://data.finops.org/" target="_blank">State of FinOps</a></li>
-                        <li><a href="https://learn.microsoft.com/fr-fr/cloud-computing/finops/overview" target="_blank">FinOps par Microsoft</a></li>
+                        <li><a href="https://www.finops.org/" target="_blank" rel="noopener noreferrer">FinOps Foundation</a></li>
+                        <li><a href="https://data.finops.org/" target="_blank" rel="noopener noreferrer">State of FinOps</a></li>
+                        <li><a href="https://learn.microsoft.com/fr-fr/cloud-computing/finops/overview" target="_blank" rel="noopener noreferrer">FinOps par Microsoft</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -569,12 +611,12 @@
                     <p><a href="mailto:spendpilot.contact@gmail.com">spendpilot.contact@gmail.com</a></p>
                     <p><a href="tel:+33749958756">+33 7 49 95 87 56</a></p>
                     <div class="footer-social">
-                        <a href="https://twitter.com/SpendPilot_app" target="_blank" aria-label="Twitter">
+                        <a href="https://twitter.com/SpendPilot_app" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                             </svg>
                         </a>
-                        <a href="https://instagram.com/spendpilot_app" target="_blank" aria-label="Instagram">
+                        <a href="https://instagram.com/spendpilot_app" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                             </svg>
@@ -592,6 +634,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js" integrity="sha384-vqFJA6I7xFh3y6xP9RA0y2zjlz2XN/8kcKqWvE/wZvlvQ1Fq7mF5Qnc7Bx6M8ePL" crossorigin="anonymous"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>

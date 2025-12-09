@@ -365,27 +365,44 @@ const translations = {
 // Translation function
 function translatePage(lang) {
     document.documentElement.lang = lang;
-    
+
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
+            const translation = translations[lang][key];
+
             if (element.tagName === 'INPUT' && element.type === 'submit') {
-                element.value = translations[lang][key];
+                element.value = translation;
             } else if (element.hasAttribute('placeholder')) {
-                element.placeholder = translations[lang][key];
+                element.placeholder = translation;
             } else {
-                element.innerHTML = translations[lang][key];
+                // Check if translation contains HTML tags
+                if (/<[^>]*>/g.test(translation)) {
+                    // Use DOMPurify if available, otherwise use textContent as fallback
+                    if (typeof DOMPurify !== 'undefined') {
+                        element.innerHTML = DOMPurify.sanitize(translation);
+                    } else {
+                        // Fallback: only allow specific safe tags
+                        const tempDiv = document.createElement('div');
+                        tempDiv.textContent = translation;
+                        element.innerHTML = tempDiv.innerHTML;
+                        console.warn('DOMPurify not loaded. HTML in translations stripped for security.');
+                    }
+                } else {
+                    // Plain text, use textContent for security
+                    element.textContent = translation;
+                }
             }
         }
     });
-    
+
     // Update language toggle button
     const langToggle = document.querySelector('.lang-toggle .lang-current');
     if (langToggle) {
         langToggle.textContent = lang.toUpperCase();
     }
-    
+
     // Save preference
     localStorage.setItem('language', lang);
 }
