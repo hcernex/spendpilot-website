@@ -113,7 +113,7 @@ const translations = {
         "pricing.example.keep.value": "160 000 €",
         "pricing.example.fee.label": "Notre fee :",
         "pricing.example.fee.value": "40 000 €",
-        "pricing.secondary.title": "Suivi Continu",
+        "pricing.secondary.title": "Suivi continu",
         "pricing.secondary.value": "Sur devis",
         "pricing.secondary.detail": "abonnement mensuel",
         "pricing.secondary.desc": "Pour une optimisation permanente de vos coûts Cloud",
