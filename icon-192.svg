@@ -1,0 +1,28 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066FF"/>
+      <stop offset="100%" style="stop-color:#00D4AA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="192" height="192" rx="40" fill="#0A0F1C"/>
+
+  <!-- Inner circle glow -->
+  <circle cx="96" cy="96" r="70" fill="url(#iconGradient)" opacity="0.15"/>
+
+  <!-- Main icon shape - abstract chart/pilot symbol -->
+  <g transform="translate(48, 48)">
+    <!-- Base shape -->
+    <rect width="96" height="96" rx="20" fill="url(#iconGradient)"/>
+
+    <!-- Chart bars -->
+    <rect x="16" y="56" width="16" height="24" rx="4" fill="white" opacity="0.9"/>
+    <rect x="40" y="40" width="16" height="40" rx="4" fill="white" opacity="0.9"/>
+    <rect x="64" y="24" width="16" height="56" rx="4" fill="white" opacity="0.9"/>
+
+    <!-- Arrow up -->
+    <path d="M48 16 L60 28 L52 28 L52 36 L44 36 L44 28 L36 28 Z" fill="white"/>
+  </g>
+</svg>

@@ -241,4 +241,4 @@ Pour toute question sur ce template, n'hésitez pas à me recontacter !
 
 ---
 
-© 2024 SpendPilot
+© 2025 SpendPilot

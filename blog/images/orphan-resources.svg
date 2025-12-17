@@ -1,73 +1,113 @@
 <svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgOrphan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a0f1f"/>
-      <stop offset="100%" style="stop-color:#2a1a2f"/>
+    <linearGradient id="bg-orphan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1c"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1a0f1f"/>
     </linearGradient>
-    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#FF6B6B"/>
-      <stop offset="100%" style="stop-color:#FF8E53"/>
+    <linearGradient id="warn-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F59E0B"/>
+      <stop offset="100%" style="stop-color:#FBBF24"/>
     </linearGradient>
+    <linearGradient id="danger-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#EF4444"/>
+      <stop offset="100%" style="stop-color:#F87171"/>
+    </linearGradient>
+    <linearGradient id="success-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#34D399"/>
+    </linearGradient>
+    <filter id="orphan-shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#F59E0B" flood-opacity="0.2"/>
+    </filter>
   </defs>
-  
+
   <!-- Background -->
-  <rect width="800" height="400" fill="url(#bgOrphan)"/>
-  
-  <!-- Ghost/orphan resources -->
-  <g transform="translate(100, 80)" opacity="0.6">
+  <rect width="800" height="400" fill="url(#bg-orphan)"/>
+
+  <!-- Grid -->
+  <g opacity="0.04">
+    <pattern id="orphan-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#F59E0B" stroke-width="0.5"/>
+    </pattern>
+    <rect width="800" height="400" fill="url(#orphan-grid)"/>
+  </g>
+
+  <!-- Orphan resources icons -->
+  <g transform="translate(80, 80)">
     <!-- Disk icon -->
-    <circle cx="50" cy="50" r="40" stroke="#FF6B6B" stroke-width="2" fill="none" stroke-dasharray="8 4"/>
-    <rect x="30" y="35" width="40" height="30" rx="4" fill="#FF6B6B" opacity="0.3"/>
-    <line x1="35" y1="50" x2="65" y2="50" stroke="#FF6B6B" stroke-width="2"/>
-    <text x="50" y="110" font-family="Arial, sans-serif" font-size="11" fill="#8892b0" text-anchor="middle">Disques</text>
+    <g filter="url(#orphan-shadow)">
+      <circle cx="60" cy="60" r="50" fill="#1F2937" stroke="#EF4444" stroke-width="2" stroke-dasharray="8 4"/>
+      <rect x="35" y="45" width="50" height="30" rx="4" fill="#EF4444" opacity="0.3"/>
+      <line x1="40" y1="60" x2="80" y2="60" stroke="#EF4444" stroke-width="2"/>
+      <circle cx="75" cy="60" r="4" fill="#EF4444"/>
+    </g>
+    <text x="60" y="130" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Disques</text>
+    <text x="60" y="145" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">détachés</text>
   </g>
-  
-  <g transform="translate(220, 80)" opacity="0.6">
+
+  <g transform="translate(200, 80)">
     <!-- IP icon -->
-    <circle cx="50" cy="50" r="40" stroke="#FF8E53" stroke-width="2" fill="none" stroke-dasharray="8 4"/>
-    <circle cx="50" cy="45" r="15" stroke="#FF8E53" stroke-width="2" fill="none"/>
-    <path d="M50 65 L50 75" stroke="#FF8E53" stroke-width="2"/>
-    <path d="M35 75 L65 75" stroke="#FF8E53" stroke-width="2"/>
-    <text x="50" y="110" font-family="Arial, sans-serif" font-size="11" fill="#8892b0" text-anchor="middle">IPs</text>
+    <g filter="url(#orphan-shadow)">
+      <circle cx="60" cy="60" r="50" fill="#1F2937" stroke="#F59E0B" stroke-width="2" stroke-dasharray="8 4"/>
+      <circle cx="60" cy="50" r="18" stroke="#F59E0B" stroke-width="2" fill="none"/>
+      <path d="M60 72 L60 85" stroke="#F59E0B" stroke-width="2"/>
+      <path d="M45 85 L75 85" stroke="#F59E0B" stroke-width="2"/>
+    </g>
+    <text x="60" y="130" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">IPs</text>
+    <text x="60" y="145" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">non utilisées</text>
   </g>
-  
-  <g transform="translate(340, 80)" opacity="0.6">
+
+  <g transform="translate(320, 80)">
     <!-- Snapshot icon -->
-    <circle cx="50" cy="50" r="40" stroke="#FF6B6B" stroke-width="2" fill="none" stroke-dasharray="8 4"/>
-    <rect x="30" y="30" width="30" height="25" rx="3" fill="none" stroke="#FF6B6B" stroke-width="2"/>
-    <rect x="40" y="40" width="30" height="25" rx="3" fill="none" stroke="#FF6B6B" stroke-width="2"/>
-    <text x="50" y="110" font-family="Arial, sans-serif" font-size="11" fill="#8892b0" text-anchor="middle">Snapshots</text>
+    <g filter="url(#orphan-shadow)">
+      <circle cx="60" cy="60" r="50" fill="#1F2937" stroke="#EF4444" stroke-width="2" stroke-dasharray="8 4"/>
+      <rect x="35" y="35" width="35" height="28" rx="4" fill="none" stroke="#EF4444" stroke-width="2"/>
+      <rect x="45" y="45" width="35" height="28" rx="4" fill="none" stroke="#EF4444" stroke-width="2"/>
+      <rect x="55" y="55" width="35" height="28" rx="4" fill="none" stroke="#EF4444" stroke-width="2"/>
+    </g>
+    <text x="60" y="130" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Snapshots</text>
+    <text x="60" y="145" font-family="Arial, sans-serif" font-size="10" fill="#64748B" text-anchor="middle">anciens</text>
   </g>
-  
-  <!-- Arrow to trash/savings -->
-  <g transform="translate(450, 100)">
-    <path d="M0 50 L80 50" stroke="#00D4AA" stroke-width="3" stroke-dasharray="10 5"/>
-    <path d="M65 35 L80 50 L65 65" stroke="#00D4AA" stroke-width="3" fill="none"/>
+
+  <!-- Arrow -->
+  <g transform="translate(440, 100)">
+    <path d="M0 40 L60 40" stroke="#10B981" stroke-width="3" stroke-dasharray="6 4"/>
+    <polygon points="55,32 70,40 55,48" fill="#10B981"/>
   </g>
-  
-  <!-- Savings result -->
-  <g transform="translate(550, 60)">
-    <circle cx="80" cy="80" r="70" stroke="#00D4AA" stroke-width="3" fill="#00D4AA" fill-opacity="0.1"/>
-    <text x="80" y="70" font-family="Arial, sans-serif" font-size="16" fill="#8892b0" text-anchor="middle">Économies</text>
-    <text x="80" y="105" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#00D4AA" text-anchor="middle">15%</text>
+
+  <!-- Result savings -->
+  <g transform="translate(520, 60)">
+    <circle cx="90" cy="90" r="80" fill="#1F2937" stroke="#10B981" stroke-width="3"/>
+    <text x="90" y="75" font-family="Arial, sans-serif" font-size="14" fill="#64748B" text-anchor="middle">Économies</text>
+    <text x="90" y="110" font-family="Arial, sans-serif" font-size="42" font-weight="800" fill="#10B981" text-anchor="middle">15%</text>
+    <text x="90" y="135" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">de la facture</text>
   </g>
-  
+
   <!-- Warning badge -->
-  <g transform="translate(680, 50)">
-    <path d="M20 0 L40 35 L0 35 Z" fill="url(#warnGrad)"/>
-    <text x="20" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">!</text>
+  <g transform="translate(720, 50)">
+    <path d="M25 0 L50 45 L0 45 Z" fill="url(#warn-gradient)"/>
+    <text x="25" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="white" text-anchor="middle">!</text>
   </g>
-  
-  <!-- Text -->
-  <text x="100" y="260" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">Ressources orphelines</text>
-  <text x="100" y="300" font-family="Arial, sans-serif" font-size="18" fill="#8892b0">Identifier et supprimer les ressources Cloud inutilisées</text>
-  
-  <!-- Tags -->
-  <g transform="translate(100, 330)">
-    <rect x="0" y="0" width="80" height="26" rx="13" fill="#FF6B6B" opacity="0.2"/>
-    <text x="40" y="18" font-family="Arial, sans-serif" font-size="11" fill="#FF6B6B" text-anchor="middle">Gaspillage</text>
-    
-    <rect x="90" y="0" width="100" height="26" rx="13" fill="#00D4AA" opacity="0.2"/>
-    <text x="140" y="18" font-family="Arial, sans-serif" font-size="11" fill="#00D4AA" text-anchor="middle">Optimisation</text>
+
+  <!-- Bottom content -->
+  <g transform="translate(80, 240)">
+    <rect x="0" y="0" width="110" height="24" rx="12" fill="#F59E0B" opacity="0.2"/>
+    <text x="55" y="16" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#FBBF24" text-anchor="middle">OPTIMISATION</text>
+
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="white">Ressources orphelines</text>
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="15" fill="#94A3B8">Identifier et supprimer les ressources Cloud inutilisées</text>
+
+    <!-- Tags -->
+    <g transform="translate(0, 100)">
+      <rect x="0" y="0" width="90" height="26" rx="13" fill="#EF4444" opacity="0.15"/>
+      <text x="45" y="17" font-family="Arial, sans-serif" font-size="11" fill="#F87171" text-anchor="middle">Gaspillage</text>
+
+      <rect x="100" y="0" width="100" height="26" rx="13" fill="#10B981" opacity="0.15"/>
+      <text x="150" y="17" font-family="Arial, sans-serif" font-size="11" fill="#34D399" text-anchor="middle">Récupérable</text>
+    </g>
   </g>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="396" width="800" height="4" fill="url(#warn-gradient)"/>
 </svg>

@@ -1,0 +1,28 @@
+{
+  "name": "spendpilot-web",
+  "version": "1.0.0",
+  "description": "Site web professionnel pour SpendPilot, solution d'optimisation des coûts Cloud (FinOps & GreenOps).",
+  "main": "cookie-consent.js",
+  "scripts": {
+    "build:css": "csso styles.css -o styles.min.css",
+    "build:js": "terser script.js -o script.min.js -c -m && terser translations.js -o translations.min.js -c -m && terser cookie-consent.js -o cookie-consent.min.js -c -m",
+    "build": "npm run build:css && npm run build:js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hcernex/spendpilot-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hcernex/spendpilot-web/issues"
+  },
+  "homepage": "https://github.com/hcernex/spendpilot-web#readme",
+  "devDependencies": {
+    "csso-cli": "^4.0.2",
+    "terser": "^5.44.1"
+  }
+}

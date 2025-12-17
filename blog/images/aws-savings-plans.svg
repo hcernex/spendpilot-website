@@ -1,57 +1,95 @@
 <svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgAWS" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0f1419"/>
-      <stop offset="100%" style="stop-color:#1a2332"/>
+    <linearGradient id="bg-aws" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1c"/>
+      <stop offset="50%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#0F172A"/>
     </linearGradient>
-    <linearGradient id="awsGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="aws-orange" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#FF9900"/>
-      <stop offset="100%" style="stop-color:#FFB84D"/>
+      <stop offset="100%" style="stop-color:#FFAD33"/>
     </linearGradient>
-    <filter id="glowAWS">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+    <linearGradient id="blue-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0066FF"/>
+      <stop offset="100%" style="stop-color:#3385FF"/>
+    </linearGradient>
+    <filter id="aws-glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <filter id="aws-shadow">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#FF9900" flood-opacity="0.2"/>
+    </filter>
   </defs>
-  
+
   <!-- Background -->
-  <rect width="800" height="400" fill="url(#bgAWS)"/>
-  
-  <!-- AWS smile/arrow -->
-  <g transform="translate(100, 140)" filter="url(#glowAWS)">
-    <path d="M0 60 Q75 120 150 60" stroke="url(#awsGrad)" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <path d="M130 50 L150 60 L140 80" stroke="url(#awsGrad)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="800" height="400" fill="url(#bg-aws)"/>
+
+  <!-- Grid -->
+  <g opacity="0.04">
+    <pattern id="aws-grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#FF9900" stroke-width="0.5"/>
+    </pattern>
+    <rect width="800" height="400" fill="url(#aws-grid)"/>
   </g>
-  
-  <!-- VS comparison -->
-  <g transform="translate(320, 80)">
-    <!-- Savings Plans box -->
-    <rect x="0" y="0" width="180" height="100" rx="12" fill="#FF9900" opacity="0.15" stroke="#FF9900" stroke-width="2"/>
-    <text x="90" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FF9900" text-anchor="middle">SAVINGS PLANS</text>
-    <text x="90" y="65" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">65%</text>
-    <text x="90" y="85" font-family="Arial, sans-serif" font-size="12" fill="#8892b0" text-anchor="middle">+ Flexibilité</text>
-    
-    <!-- VS -->
-    <text x="225" y="55" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#666" text-anchor="middle">VS</text>
-    
-    <!-- Reserved Instances box -->
-    <rect x="270" y="0" width="180" height="100" rx="12" fill="#0066FF" opacity="0.15" stroke="#0066FF" stroke-width="2"/>
-    <text x="360" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0066FF" text-anchor="middle">RESERVED</text>
-    <text x="360" y="65" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">72%</text>
-    <text x="360" y="85" font-family="Arial, sans-serif" font-size="12" fill="#8892b0" text-anchor="middle">+ Économies</text>
+
+  <!-- Decorative elements -->
+  <circle cx="100" cy="350" r="100" fill="#FF9900" opacity="0.04"/>
+  <circle cx="700" cy="80" r="120" fill="#0066FF" opacity="0.04"/>
+
+  <!-- AWS Arrow smile -->
+  <g transform="translate(80, 130)" filter="url(#aws-glow)">
+    <path d="M0 70 Q80 130 160 70" stroke="url(#aws-orange)" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M135 55 L160 70 L145 90" stroke="url(#aws-orange)" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  
-  <!-- Question mark -->
-  <g transform="translate(600, 200)">
-    <circle cx="40" cy="40" r="35" stroke="url(#awsGrad)" stroke-width="3" fill="none"/>
-    <text x="40" y="55" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="url(#awsGrad)" text-anchor="middle">?</text>
+
+  <!-- VS Comparison -->
+  <g transform="translate(300, 70)">
+    <!-- Savings Plans Card -->
+    <rect x="0" y="0" width="180" height="130" rx="16" fill="#1F2937" stroke="#FF9900" stroke-width="2"/>
+    <rect x="0" y="0" width="180" height="40" rx="16" fill="#FF9900" opacity="0.15"/>
+    <rect x="0" y="24" width="180" height="16" fill="#FF9900" opacity="0.15"/>
+    <text x="90" y="28" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#FF9900" text-anchor="middle">SAVINGS PLANS</text>
+    <text x="90" y="75" font-family="Arial, sans-serif" font-size="36" font-weight="800" fill="white" text-anchor="middle">66%</text>
+    <text x="90" y="100" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">d'économies max</text>
+    <rect x="50" y="110" width="80" height="24" rx="12" fill="#FF9900" opacity="0.2"/>
+    <text x="90" y="126" font-family="Arial, sans-serif" font-size="10" fill="#FFAD33" text-anchor="middle">+ Flexibilité</text>
+
+    <!-- VS Circle -->
+    <circle cx="225" cy="65" r="24" fill="#1F2937" stroke="#374151" stroke-width="1"/>
+    <text x="225" y="71" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#64748B" text-anchor="middle">VS</text>
+
+    <!-- Reserved Instances Card -->
+    <rect x="270" y="0" width="180" height="130" rx="16" fill="#1F2937" stroke="#0066FF" stroke-width="2"/>
+    <rect x="270" y="0" width="180" height="40" rx="16" fill="#0066FF" opacity="0.15"/>
+    <rect x="270" y="24" width="180" height="16" fill="#0066FF" opacity="0.15"/>
+    <text x="360" y="28" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#3385FF" text-anchor="middle">RESERVED</text>
+    <text x="360" y="75" font-family="Arial, sans-serif" font-size="36" font-weight="800" fill="white" text-anchor="middle">72%</text>
+    <text x="360" y="100" font-family="Arial, sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">d'économies max</text>
+    <rect x="320" y="110" width="80" height="24" rx="12" fill="#0066FF" opacity="0.2"/>
+    <text x="360" y="126" font-family="Arial, sans-serif" font-size="10" fill="#3385FF" text-anchor="middle">+ Engagement</text>
   </g>
-  
-  <!-- Text -->
-  <text x="100" y="280" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white">AWS Savings Plans</text>
-  <text x="100" y="320" font-family="Arial, sans-serif" font-size="20" fill="#8892b0">vs Reserved Instances</text>
-  <text x="100" y="360" font-family="Arial, sans-serif" font-size="16" fill="#FF9900">Guide comparatif détaillé →</text>
+
+  <!-- Question indicator -->
+  <g transform="translate(680, 90)">
+    <circle cx="40" cy="40" r="35" stroke="url(#aws-orange)" stroke-width="3" fill="#FF9900" opacity="0.1"/>
+    <text x="40" y="52" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#FF9900" text-anchor="middle">?</text>
+  </g>
+
+  <!-- Bottom content -->
+  <g transform="translate(80, 240)">
+    <rect x="0" y="0" width="60" height="22" rx="11" fill="#FF9900" opacity="0.2"/>
+    <text x="30" y="15" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#FF9900" text-anchor="middle">AWS</text>
+
+    <text x="0" y="55" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="white">Savings Plans</text>
+    <text x="0" y="85" font-family="Arial, sans-serif" font-size="18" fill="#94A3B8">vs Reserved Instances</text>
+    <text x="0" y="115" font-family="Arial, sans-serif" font-size="14" fill="#FF9900">Guide comparatif complet</text>
+  </g>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="396" width="400" height="4" fill="url(#aws-orange)"/>
+  <rect x="400" y="396" width="400" height="4" fill="url(#blue-gradient)"/>
 </svg>

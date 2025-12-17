@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog FinOps & GreenOps — SpendPilot</title>
-    <meta name="description" content="Découvrez nos articles sur le FinOps, GreenOps, l'optimisation des coûts Cloud Azure et AWS. Conseils, bonnes pratiques et actualités.">
+    <title>Comment réduire sa facture Cloud ? Blog FinOps & GreenOps — SpendPilot</title>
+    <meta name="description" content="Guides pratiques pour réduire votre facture Cloud AWS, Azure et GCP. Conseils FinOps, GreenOps, bonnes pratiques d'optimisation et études de cas.">
+    <meta name="keywords" content="réduire facture cloud, optimisation cloud, FinOps, GreenOps, économies AWS, Azure costs, GCP">
+
+    <!-- Meta robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#0066FF">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://spendpilot.com/blog.html">
-    <meta property="og:title" content="Blog FinOps & GreenOps — SpendPilot">
-    <meta property="og:description" content="Découvrez nos articles sur le FinOps, GreenOps, l'optimisation des coûts Cloud Azure et AWS.">
-    <meta property="og:image" content="https://spendpilot.com/favicon.png">
+    <meta property="og:url" content="https://spendpilot.fr/blog.html">
+    <meta property="og:site_name" content="SpendPilot">
+    <meta property="og:title" content="Comment réduire sa facture Cloud ? Blog FinOps & GreenOps">
+    <meta property="og:description" content="Guides pratiques pour réduire votre facture Cloud AWS, Azure et GCP. Conseils FinOps et GreenOps.">
+    <meta property="og:image" content="https://spendpilot.fr/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://spendpilot.com/blog.html">
-    <meta property="twitter:title" content="Blog FinOps & GreenOps — SpendPilot">
-    <meta property="twitter:description" content="Articles, guides et conseils sur l'optimisation des coûts Cloud.">
-    <meta property="twitter:image" content="https://spendpilot.com/favicon.png">
+    <meta property="twitter:url" content="https://spendpilot.fr/blog.html">
+    <meta property="twitter:title" content="Comment réduire sa facture Cloud ? Blog FinOps & GreenOps">
+    <meta property="twitter:description" content="Guides pratiques et conseils FinOps pour optimiser vos coûts Cloud AWS, Azure, GCP.">
+    <meta property="twitter:image" content="https://spendpilot.fr/og-image.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,19 +34,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/webp" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://spendpilot.com/blog.html">
+    <link rel="canonical" href="https://spendpilot.fr/blog.html">
+
+    <!-- Hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="fr" href="https://spendpilot.fr/blog.html">
+    <link rel="alternate" hreflang="en" href="https://spendpilot.fr/blog.html">
+    <link rel="alternate" hreflang="x-default" href="https://spendpilot.fr/blog.html">
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="favicon.png" alt="SpendPilot" class="logo-img">
+                <img src="favicon.png" alt="SpendPilot" class="logo-img" width="36" height="36">
                 <span class="logo-text">Spend<span class="logo-highlight">Pilot</span></span>
             </a>
             <ul class="nav-links" id="nav-links">
@@ -69,6 +89,9 @@
             </button>
         </div>
     </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
 
     <!-- Blog Header -->
     <section class="blog-header">
@@ -189,16 +212,18 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="favicon.png" alt="SpendPilot" class="logo-img">
+                        <img src="favicon.png" alt="SpendPilot" class="logo-img" width="36" height="36">
                         <span class="logo-text">Spend<span class="logo-highlight">Pilot</span></span>
                     </a>
-                    <p data-i18n="footer.tagline">Optimisation des coûts Cloud. FinOps & GreenOps pour Azure et AWS.</p>
+                    <p data-i18n="footer.tagline">Plateforme SaaS d'optimisation des coûts Cloud. FinOps & GreenOps pour AWS, Azure et GCP.</p>
                 </div>
                 <div class="footer-links">
                     <h4 data-i18n="footer.navigation">Navigation</h4>
@@ -236,7 +261,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer.copyright">© 2024 SpendPilot. Tous droits réservés.</p>
+                <p data-i18n="footer.copyright">© 2025 SpendPilot. Tous droits réservés.</p>
                 <div class="footer-legal">
                     <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
                     <a href="confidentialite.html" data-i18n="footer.privacy">Politique de confidentialité</a>
@@ -248,5 +273,6 @@
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js" integrity="sha384-vqFJA6I7xFh3y6xP9RA0y2zjlz2XN/8kcKqWvE/wZvlvQ1Fq7mF5Qnc7Bx6M8ePL" crossorigin="anonymous"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>

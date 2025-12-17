@@ -6,19 +6,26 @@
     <title>Contact — SpendPilot | Audit Cloud Gratuit</title>
     <meta name="description" content="Demandez votre audit Cloud gratuit. Découvrez en 48h combien vous pouvez économiser sur Azure et AWS.">
 
+    <!-- Meta robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#0066FF">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://spendpilot.com/contact.html">
+    <meta property="og:url" content="https://spendpilot.fr/contact.html">
+    <meta property="og:site_name" content="SpendPilot">
     <meta property="og:title" content="Contact — SpendPilot | Audit Cloud Gratuit">
     <meta property="og:description" content="Demandez votre audit Cloud gratuit. Découvrez en 48h combien vous pouvez économiser sur Azure et AWS.">
-    <meta property="og:image" content="https://spendpilot.com/favicon.png">
+    <meta property="og:image" content="https://spendpilot.fr/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
-    <meta property="twitter:url" content="https://spendpilot.com/contact.html">
+    <meta property="twitter:url" content="https://spendpilot.fr/contact.html">
     <meta property="twitter:title" content="Contact — SpendPilot | Audit Cloud Gratuit">
     <meta property="twitter:description" content="Demandez votre audit Cloud gratuit en 48h.">
-    <meta property="twitter:image" content="https://spendpilot.com/favicon.png">
+    <meta property="twitter:image" content="https://spendpilot.fr/favicon.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,10 +33,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/webp" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://spendpilot.com/contact.html">
+    <link rel="canonical" href="https://spendpilot.fr/contact.html">
+
+    <!-- Hreflang for multilingual SEO -->
+    <link rel="alternate" hreflang="fr" href="https://spendpilot.fr/contact.html">
+    <link rel="alternate" hreflang="en" href="https://spendpilot.fr/contact.html">
+    <link rel="alternate" hreflang="x-default" href="https://spendpilot.fr/contact.html">
 
     <!-- Structured Data - FAQPage -->
     <script type="application/ld+json">
@@ -76,11 +92,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
         <div class="nav-container">
             <a href="index.html" class="logo">
-                <img src="favicon.png" alt="SpendPilot" class="logo-img">
+                <img src="favicon.png" alt="SpendPilot" class="logo-img" width="36" height="36">
                 <span class="logo-text">Spend<span class="logo-highlight">Pilot</span></span>
             </a>
             <ul class="nav-links" id="nav-links">
@@ -111,6 +130,9 @@
             </button>
         </div>
     </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
 
     <!-- Contact Section -->
     <section class="contact-section">
@@ -143,7 +165,7 @@
                             </div>
                             <div class="contact-method-text">
                                 <span data-i18n="contact.location.label">Localisation</span>
-                                <strong data-i18n="contact.location.value">Mareil-Marly, France</strong>
+                                <strong data-i18n="contact.location.value">France</strong>
                             </div>
                         </div>
                         <div class="contact-method">
@@ -285,13 +307,15 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <img src="favicon.png" alt="SpendPilot" class="logo-img">
+                        <img src="favicon.png" alt="SpendPilot" class="logo-img" width="36" height="36">
                         <span class="logo-text">Spend<span class="logo-highlight">Pilot</span></span>
                     </a>
                     <p data-i18n="footer.tagline">Optimisation des coûts Cloud. FinOps et GreenOps pour Azure et AWS.</p>
@@ -332,7 +356,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer.copyright">© 2024 SpendPilot. Tous droits réservés.</p>
+                <p data-i18n="footer.copyright">© 2025 SpendPilot. Tous droits réservés.</p>
                 <div class="footer-legal">
                     <a href="mentions-legales.html" data-i18n="footer.legal">Mentions légales</a>
                     <a href="confidentialite.html" data-i18n="footer.privacy">Politique de confidentialité</a>
@@ -344,5 +368,6 @@
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js" integrity="sha384-vqFJA6I7xFh3y6xP9RA0y2zjlz2XN/8kcKqWvE/wZvlvQ1Fq7mF5Qnc7Bx6M8ePL" crossorigin="anonymous"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
+    <script src="cookie-consent.js"></script>
 </body>
 </html>
