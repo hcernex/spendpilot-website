@@ -9,7 +9,7 @@ const translations = {
         "nav.pricing": "Tarifs",
         "nav.resources": "Ressources",
         "nav.contact": "Contact",
-        "nav.cta": "Audit Gratuit →",
+        "nav.cta": "Audit gratuit →",
         
         // Hero
         "hero.badge": "FinOps & GreenOps — AWS, Azure & GCP",
